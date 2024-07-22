@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'kafka.examples'
+version '2.3.0'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Apache Kafka Clients
+    implementation 'org.apache.kafka:kafka-clients:2.3.0'
+
+    // Apache Log4J2 binding for SLF4J
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.11.0'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
